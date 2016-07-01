@@ -2,12 +2,12 @@
 module.exports = function(app,passport) {
    //Home page with login links
    app.get('/', function(req, res){
-      res.render('index.html');
+      res.render('index.ejs');
    });
 
    //flash login message
    app.get('/login', function(req,res){
-     res.render('login.html', {message:req.flash('loginMessage')});
+     res.render('login.ejs',{message: req.flash('loginMessage') });
    });
 
    //process the login form
@@ -15,7 +15,7 @@ module.exports = function(app,passport) {
 
    //Signup
    app.get('/signup', function(req,res){
-     res.render('signup.html',{message: req.flash('signupMessage') });
+     res.render('signup.ejs',{message: req.flash('signupMessage') });
    });
 
    //process the signup form
@@ -27,7 +27,7 @@ module.exports = function(app,passport) {
    //We will use route middleware to verify (isLoggedIn function)
 
    app.get('/profile', isLoggedIn, function(req,res){
-     res.render('profile.html', {
+     res.render('profile.ejs', {
        user : req.user //get user out of session and pass to template
      });
    });

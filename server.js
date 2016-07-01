@@ -34,8 +34,10 @@ app.use(morgan('dev')); // log every request to console
 app.use(cookieParser()); // read cookies (needed for auth)
 app.use(bodyParser()); // get information from html forms
 
-// app.set('view engine', 'ejs'); //ejs templating
-app.use(express.static('views'));
+app.set('view engine', 'ejs'); //ejs templating
+// app.use(express.static('views'));
+// app.use(express.static(__dirname + '/views'));
+
 
 
 // required for Passport
