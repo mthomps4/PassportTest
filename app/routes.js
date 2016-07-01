@@ -5,7 +5,8 @@ module.exports = function(app,passport) {
       res.render('index.ejs');
    });
 
-   //flash login message
+
+   //login page
    app.get('/login', function(req,res){
      res.render('login.ejs',{message: req.flash('loginMessage') });
    });
@@ -16,8 +17,8 @@ module.exports = function(app,passport) {
           failureRedirect : '/login', // redirect back to the signup page if there is an error
           failureFlash : true // allow flash messages
       }));
-      
-   //Signup
+
+   //Signup page
    app.get('/signup', function(req,res){
      res.render('signup.ejs',{message: req.flash('signupMessage') });
    });
@@ -30,9 +31,9 @@ module.exports = function(app,passport) {
     }));
 
 
-   //Profile Section
-   //Will want this protected. Will need sign in to view
-   //We will use route middleware to verify (isLoggedIn function)
+//Profile Section
+//Will want this protected. Will need sign in to view
+//Using route middleware to verify (isLoggedIn function)
 
    app.get('/profile', isLoggedIn, function(req,res){
      res.render('profile.ejs', {
@@ -40,13 +41,14 @@ module.exports = function(app,passport) {
      });
    });
 
-    //logout
+    //logout (passport function)
     app.get('/logout', function(req,res){
       req.logout();
       res.redirect('/');
     });
 
 }; //END MODULE.EXPORT
+
 
 function isLoggedIn(req, res, next) {
   //if user is authenticated carry on
