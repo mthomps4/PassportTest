@@ -2,6 +2,9 @@
   "name": "node-authentication",
   "main": "server.js",
   "license": "MT",
+  "scripts": {
+    "start": "node server.js"
+  },
   "dependencies": {
     "bcrypt-nodejs": "latest",
     "body-parser": "~1.0.0",
