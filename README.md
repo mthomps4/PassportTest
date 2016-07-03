@@ -5,4 +5,8 @@ Test login application using MongoDB and Passport - local - google -twitter - fa
 
 #Run
 - mongod
-- npm start 
+- npm start
+
+#SideNotes and Fixes
+- Accounts only linked if first logged in.
+- Logout security faulted with back button.
