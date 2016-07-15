@@ -40,7 +40,7 @@ require('./config/passport')(passport); // pass passport for configuration
 
 
 // ** required for passport
-   app.use(session({ secret: 'PassportTraveler' })); // session secret
+   app.use(session({secret: 'PassportTraveler'})); // session secret
    app.use(passport.initialize());
    app.use(passport.session()); // persistent login sessions
    app.use(flash()); // for FlasH messages

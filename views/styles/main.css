@@ -3,5 +3,10 @@ body {
    background:teal;
  }
 a{
-  color:white;
+  color:blue;
+}
+
+.container{
+  background-color:#EEE;
+  padding:20px;
 }
