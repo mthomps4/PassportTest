@@ -14,4 +14,4 @@ Test login application using MongoDB and Passport
 - Logout security faulted with back button.
 - Information Change
 
-![desktopimage](https://cloud.githubusercontent.com/assets/17518011/16886116/4d4f8222-4aa0-11e6-9805-29ca9bf8d81a.PNG)
+![desktopimage](https://cloud.githubusercontent.com/assets/17518011/16886210/d985bda6-4aa0-11e6-84b7-2d8de2506385.PNG)
